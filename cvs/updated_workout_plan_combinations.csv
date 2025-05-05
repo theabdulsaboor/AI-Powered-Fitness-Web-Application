@@ -1,0 +1,289 @@
+Age Group,Gender,Fitness Goal,Fitness Level,Equipment,Days per Week,Workout Profile
+18-25,Male,Weight Loss,Beginner,No Equipment,1-3,1
+18-25,Female,Weight Loss,Beginner,No Equipment,1-3,1
+18-25,Male,Weight Loss,Beginner,No Equipment,4-6,2
+18-25,Female,Weight Loss,Beginner,No Equipment,4-6,2
+18-25,Male,Weight Loss,Beginner,Gym,1-3,3
+18-25,Female,Weight Loss,Beginner,Gym,1-3,3
+18-25,Male,Weight Loss,Beginner,Gym,4-6,4
+18-25,Female,Weight Loss,Beginner,Gym,4-6,4
+18-25,Male,Weight Loss,Intermediate,No Equipment,1-3,5
+18-25,Female,Weight Loss,Intermediate,No Equipment,1-3,5
+18-25,Male,Weight Loss,Intermediate,No Equipment,4-6,6
+18-25,Female,Weight Loss,Intermediate,No Equipment,4-6,6
+18-25,Male,Weight Loss,Intermediate,Gym,1-3,7
+18-25,Female,Weight Loss,Intermediate,Gym,1-3,7
+18-25,Male,Weight Loss,Intermediate,Gym,4-6,8
+18-25,Female,Weight Loss,Intermediate,Gym,4-6,8
+18-25,Male,Weight Loss,Advanced,No Equipment,1-3,9
+18-25,Female,Weight Loss,Advanced,No Equipment,1-3,9
+18-25,Male,Weight Loss,Advanced,No Equipment,4-6,10
+18-25,Female,Weight Loss,Advanced,No Equipment,4-6,10
+18-25,Male,Weight Loss,Advanced,Gym,1-3,11
+18-25,Female,Weight Loss,Advanced,Gym,1-3,11
+18-25,Male,Weight Loss,Advanced,Gym,4-6,12
+18-25,Female,Weight Loss,Advanced,Gym,4-6,12
+18-25,Male,Muscle Gain,Beginner,No Equipment,1-3,13
+18-25,Female,Muscle Gain,Beginner,No Equipment,1-3,13
+18-25,Male,Muscle Gain,Beginner,No Equipment,4-6,14
+18-25,Female,Muscle Gain,Beginner,No Equipment,4-6,14
+18-25,Male,Muscle Gain,Beginner,Gym,1-3,15
+18-25,Female,Muscle Gain,Beginner,Gym,1-3,15
+18-25,Male,Muscle Gain,Beginner,Gym,4-6,16
+18-25,Female,Muscle Gain,Beginner,Gym,4-6,16
+18-25,Male,Muscle Gain,Intermediate,No Equipment,1-3,17
+18-25,Female,Muscle Gain,Intermediate,No Equipment,1-3,17
+18-25,Male,Muscle Gain,Intermediate,No Equipment,4-6,18
+18-25,Female,Muscle Gain,Intermediate,No Equipment,4-6,18
+18-25,Male,Muscle Gain,Intermediate,Gym,1-3,19
+18-25,Female,Muscle Gain,Intermediate,Gym,1-3,19
+18-25,Male,Muscle Gain,Intermediate,Gym,4-6,20
+18-25,Female,Muscle Gain,Intermediate,Gym,4-6,20
+18-25,Male,Muscle Gain,Advanced,No Equipment,1-3,21
+18-25,Female,Muscle Gain,Advanced,No Equipment,1-3,21
+18-25,Male,Muscle Gain,Advanced,No Equipment,4-6,22
+18-25,Female,Muscle Gain,Advanced,No Equipment,4-6,22
+18-25,Male,Muscle Gain,Advanced,Gym,1-3,23
+18-25,Female,Muscle Gain,Advanced,Gym,1-3,23
+18-25,Male,Muscle Gain,Advanced,Gym,4-6,24
+18-25,Female,Muscle Gain,Advanced,Gym,4-6,24
+18-25,Male,General Fitness,Beginner,No Equipment,1-3,25
+18-25,Female,General Fitness,Beginner,No Equipment,1-3,25
+18-25,Male,General Fitness,Beginner,No Equipment,4-6,26
+18-25,Female,General Fitness,Beginner,No Equipment,4-6,26
+18-25,Male,General Fitness,Beginner,Gym,1-3,27
+18-25,Female,General Fitness,Beginner,Gym,1-3,27
+18-25,Male,General Fitness,Beginner,Gym,4-6,28
+18-25,Female,General Fitness,Beginner,Gym,4-6,28
+18-25,Male,General Fitness,Intermediate,No Equipment,1-3,29
+18-25,Female,General Fitness,Intermediate,No Equipment,1-3,29
+18-25,Male,General Fitness,Intermediate,No Equipment,4-6,30
+18-25,Female,General Fitness,Intermediate,No Equipment,4-6,30
+18-25,Male,General Fitness,Intermediate,Gym,1-3,31
+18-25,Female,General Fitness,Intermediate,Gym,1-3,31
+18-25,Male,General Fitness,Intermediate,Gym,4-6,32
+18-25,Female,General Fitness,Intermediate,Gym,4-6,32
+18-25,Male,General Fitness,Advanced,No Equipment,1-3,33
+18-25,Female,General Fitness,Advanced,No Equipment,1-3,33
+18-25,Male,General Fitness,Advanced,No Equipment,4-6,34
+18-25,Female,General Fitness,Advanced,No Equipment,4-6,34
+18-25,Male,General Fitness,Advanced,Gym,1-3,35
+18-25,Female,General Fitness,Advanced,Gym,1-3,35
+18-25,Male,General Fitness,Advanced,Gym,4-6,36
+18-25,Female,General Fitness,Advanced,Gym,4-6,36
+26-35,Male,Weight Loss,Beginner,No Equipment,1-3,1
+26-35,Female,Weight Loss,Beginner,No Equipment,1-3,1
+26-35,Male,Weight Loss,Beginner,No Equipment,4-6,2
+26-35,Female,Weight Loss,Beginner,No Equipment,4-6,2
+26-35,Male,Weight Loss,Beginner,Gym,1-3,3
+26-35,Female,Weight Loss,Beginner,Gym,1-3,3
+26-35,Male,Weight Loss,Beginner,Gym,4-6,4
+26-35,Female,Weight Loss,Beginner,Gym,4-6,4
+26-35,Male,Weight Loss,Intermediate,No Equipment,1-3,5
+26-35,Female,Weight Loss,Intermediate,No Equipment,1-3,5
+26-35,Male,Weight Loss,Intermediate,No Equipment,4-6,6
+26-35,Female,Weight Loss,Intermediate,No Equipment,4-6,6
+26-35,Male,Weight Loss,Intermediate,Gym,1-3,7
+26-35,Female,Weight Loss,Intermediate,Gym,1-3,7
+26-35,Male,Weight Loss,Intermediate,Gym,4-6,8
+26-35,Female,Weight Loss,Intermediate,Gym,4-6,8
+26-35,Male,Weight Loss,Advanced,No Equipment,1-3,9
+26-35,Female,Weight Loss,Advanced,No Equipment,1-3,9
+26-35,Male,Weight Loss,Advanced,No Equipment,4-6,10
+26-35,Female,Weight Loss,Advanced,No Equipment,4-6,10
+26-35,Male,Weight Loss,Advanced,Gym,1-3,11
+26-35,Female,Weight Loss,Advanced,Gym,1-3,11
+26-35,Male,Weight Loss,Advanced,Gym,4-6,12
+26-35,Female,Weight Loss,Advanced,Gym,4-6,12
+26-35,Male,Muscle Gain,Beginner,No Equipment,1-3,13
+26-35,Female,Muscle Gain,Beginner,No Equipment,1-3,13
+26-35,Male,Muscle Gain,Beginner,No Equipment,4-6,14
+26-35,Female,Muscle Gain,Beginner,No Equipment,4-6,14
+26-35,Male,Muscle Gain,Beginner,Gym,1-3,15
+26-35,Female,Muscle Gain,Beginner,Gym,1-3,15
+26-35,Male,Muscle Gain,Beginner,Gym,4-6,16
+26-35,Female,Muscle Gain,Beginner,Gym,4-6,16
+26-35,Male,Muscle Gain,Intermediate,No Equipment,1-3,17
+26-35,Female,Muscle Gain,Intermediate,No Equipment,1-3,17
+26-35,Male,Muscle Gain,Intermediate,No Equipment,4-6,18
+26-35,Female,Muscle Gain,Intermediate,No Equipment,4-6,18
+26-35,Male,Muscle Gain,Intermediate,Gym,1-3,19
+26-35,Female,Muscle Gain,Intermediate,Gym,1-3,19
+26-35,Male,Muscle Gain,Intermediate,Gym,4-6,20
+26-35,Female,Muscle Gain,Intermediate,Gym,4-6,20
+26-35,Male,Muscle Gain,Advanced,No Equipment,1-3,21
+26-35,Female,Muscle Gain,Advanced,No Equipment,1-3,21
+26-35,Male,Muscle Gain,Advanced,No Equipment,4-6,22
+26-35,Female,Muscle Gain,Advanced,No Equipment,4-6,22
+26-35,Male,Muscle Gain,Advanced,Gym,1-3,23
+26-35,Female,Muscle Gain,Advanced,Gym,1-3,23
+26-35,Male,Muscle Gain,Advanced,Gym,4-6,24
+26-35,Female,Muscle Gain,Advanced,Gym,4-6,24
+26-35,Male,General Fitness,Beginner,No Equipment,1-3,25
+26-35,Female,General Fitness,Beginner,No Equipment,1-3,25
+26-35,Male,General Fitness,Beginner,No Equipment,4-6,26
+26-35,Female,General Fitness,Beginner,No Equipment,4-6,26
+26-35,Male,General Fitness,Beginner,Gym,1-3,27
+26-35,Female,General Fitness,Beginner,Gym,1-3,27
+26-35,Male,General Fitness,Beginner,Gym,4-6,28
+26-35,Female,General Fitness,Beginner,Gym,4-6,28
+26-35,Male,General Fitness,Intermediate,No Equipment,1-3,29
+26-35,Female,General Fitness,Intermediate,No Equipment,1-3,29
+26-35,Male,General Fitness,Intermediate,No Equipment,4-6,30
+26-35,Female,General Fitness,Intermediate,No Equipment,4-6,30
+26-35,Male,General Fitness,Intermediate,Gym,1-3,31
+26-35,Female,General Fitness,Intermediate,Gym,1-3,31
+26-35,Male,General Fitness,Intermediate,Gym,4-6,32
+26-35,Female,General Fitness,Intermediate,Gym,4-6,32
+26-35,Male,General Fitness,Advanced,No Equipment,1-3,33
+26-35,Female,General Fitness,Advanced,No Equipment,1-3,33
+26-35,Male,General Fitness,Advanced,No Equipment,4-6,34
+26-35,Female,General Fitness,Advanced,No Equipment,4-6,34
+26-35,Male,General Fitness,Advanced,Gym,1-3,35
+26-35,Female,General Fitness,Advanced,Gym,1-3,35
+26-35,Male,General Fitness,Advanced,Gym,4-6,36
+26-35,Female,General Fitness,Advanced,Gym,4-6,36
+36-45,Male,Weight Loss,Beginner,No Equipment,1-3,1
+36-45,Female,Weight Loss,Beginner,No Equipment,1-3,1
+36-45,Male,Weight Loss,Beginner,No Equipment,4-6,2
+36-45,Female,Weight Loss,Beginner,No Equipment,4-6,2
+36-45,Male,Weight Loss,Beginner,Gym,1-3,3
+36-45,Female,Weight Loss,Beginner,Gym,1-3,3
+36-45,Male,Weight Loss,Beginner,Gym,4-6,4
+36-45,Female,Weight Loss,Beginner,Gym,4-6,4
+36-45,Male,Weight Loss,Intermediate,No Equipment,1-3,5
+36-45,Female,Weight Loss,Intermediate,No Equipment,1-3,5
+36-45,Male,Weight Loss,Intermediate,No Equipment,4-6,6
+36-45,Female,Weight Loss,Intermediate,No Equipment,4-6,6
+36-45,Male,Weight Loss,Intermediate,Gym,1-3,7
+36-45,Female,Weight Loss,Intermediate,Gym,1-3,7
+36-45,Male,Weight Loss,Intermediate,Gym,4-6,8
+36-45,Female,Weight Loss,Intermediate,Gym,4-6,8
+36-45,Male,Weight Loss,Advanced,No Equipment,1-3,9
+36-45,Female,Weight Loss,Advanced,No Equipment,1-3,9
+36-45,Male,Weight Loss,Advanced,No Equipment,4-6,10
+36-45,Female,Weight Loss,Advanced,No Equipment,4-6,10
+36-45,Male,Weight Loss,Advanced,Gym,1-3,11
+36-45,Female,Weight Loss,Advanced,Gym,1-3,11
+36-45,Male,Weight Loss,Advanced,Gym,4-6,12
+36-45,Female,Weight Loss,Advanced,Gym,4-6,12
+36-45,Male,Muscle Gain,Beginner,No Equipment,1-3,13
+36-45,Female,Muscle Gain,Beginner,No Equipment,1-3,13
+36-45,Male,Muscle Gain,Beginner,No Equipment,4-6,14
+36-45,Female,Muscle Gain,Beginner,No Equipment,4-6,14
+36-45,Male,Muscle Gain,Beginner,Gym,1-3,15
+36-45,Female,Muscle Gain,Beginner,Gym,1-3,15
+36-45,Male,Muscle Gain,Beginner,Gym,4-6,16
+36-45,Female,Muscle Gain,Beginner,Gym,4-6,16
+36-45,Male,Muscle Gain,Intermediate,No Equipment,1-3,17
+36-45,Female,Muscle Gain,Intermediate,No Equipment,1-3,17
+36-45,Male,Muscle Gain,Intermediate,No Equipment,4-6,18
+36-45,Female,Muscle Gain,Intermediate,No Equipment,4-6,18
+36-45,Male,Muscle Gain,Intermediate,Gym,1-3,19
+36-45,Female,Muscle Gain,Intermediate,Gym,1-3,19
+36-45,Male,Muscle Gain,Intermediate,Gym,4-6,20
+36-45,Female,Muscle Gain,Intermediate,Gym,4-6,20
+36-45,Male,Muscle Gain,Advanced,No Equipment,1-3,21
+36-45,Female,Muscle Gain,Advanced,No Equipment,1-3,21
+36-45,Male,Muscle Gain,Advanced,No Equipment,4-6,22
+36-45,Female,Muscle Gain,Advanced,No Equipment,4-6,22
+36-45,Male,Muscle Gain,Advanced,Gym,1-3,23
+36-45,Female,Muscle Gain,Advanced,Gym,1-3,23
+36-45,Male,Muscle Gain,Advanced,Gym,4-6,24
+36-45,Female,Muscle Gain,Advanced,Gym,4-6,24
+36-45,Male,General Fitness,Beginner,No Equipment,1-3,25
+36-45,Female,General Fitness,Beginner,No Equipment,1-3,25
+36-45,Male,General Fitness,Beginner,No Equipment,4-6,26
+36-45,Female,General Fitness,Beginner,No Equipment,4-6,26
+36-45,Male,General Fitness,Beginner,Gym,1-3,27
+36-45,Female,General Fitness,Beginner,Gym,1-3,27
+36-45,Male,General Fitness,Beginner,Gym,4-6,28
+36-45,Female,General Fitness,Beginner,Gym,4-6,28
+36-45,Male,General Fitness,Intermediate,No Equipment,1-3,29
+36-45,Female,General Fitness,Intermediate,No Equipment,1-3,29
+36-45,Male,General Fitness,Intermediate,No Equipment,4-6,30
+36-45,Female,General Fitness,Intermediate,No Equipment,4-6,30
+36-45,Male,General Fitness,Intermediate,Gym,1-3,31
+36-45,Female,General Fitness,Intermediate,Gym,1-3,31
+36-45,Male,General Fitness,Intermediate,Gym,4-6,32
+36-45,Female,General Fitness,Intermediate,Gym,4-6,32
+36-45,Male,General Fitness,Advanced,No Equipment,1-3,33
+36-45,Female,General Fitness,Advanced,No Equipment,1-3,33
+36-45,Male,General Fitness,Advanced,No Equipment,4-6,34
+36-45,Female,General Fitness,Advanced,No Equipment,4-6,34
+36-45,Male,General Fitness,Advanced,Gym,1-3,35
+36-45,Female,General Fitness,Advanced,Gym,1-3,35
+36-45,Male,General Fitness,Advanced,Gym,4-6,36
+36-45,Female,General Fitness,Advanced,Gym,4-6,36
+46+,Male,Weight Loss,Beginner,No Equipment,1-3,1
+46+,Female,Weight Loss,Beginner,No Equipment,1-3,1
+46+,Male,Weight Loss,Beginner,No Equipment,4-6,2
+46+,Female,Weight Loss,Beginner,No Equipment,4-6,2
+46+,Male,Weight Loss,Beginner,Gym,1-3,3
+46+,Female,Weight Loss,Beginner,Gym,1-3,3
+46+,Male,Weight Loss,Beginner,Gym,4-6,4
+46+,Female,Weight Loss,Beginner,Gym,4-6,4
+46+,Male,Weight Loss,Intermediate,No Equipment,1-3,5
+46+,Female,Weight Loss,Intermediate,No Equipment,1-3,5
+46+,Male,Weight Loss,Intermediate,No Equipment,4-6,6
+46+,Female,Weight Loss,Intermediate,No Equipment,4-6,6
+46+,Male,Weight Loss,Intermediate,Gym,1-3,7
+46+,Female,Weight Loss,Intermediate,Gym,1-3,7
+46+,Male,Weight Loss,Intermediate,Gym,4-6,8
+46+,Female,Weight Loss,Intermediate,Gym,4-6,8
+46+,Male,Weight Loss,Advanced,No Equipment,1-3,9
+46+,Female,Weight Loss,Advanced,No Equipment,1-3,9
+46+,Male,Weight Loss,Advanced,No Equipment,4-6,10
+46+,Female,Weight Loss,Advanced,No Equipment,4-6,10
+46+,Male,Weight Loss,Advanced,Gym,1-3,11
+46+,Female,Weight Loss,Advanced,Gym,1-3,11
+46+,Male,Weight Loss,Advanced,Gym,4-6,12
+46+,Female,Weight Loss,Advanced,Gym,4-6,12
+46+,Male,Muscle Gain,Beginner,No Equipment,1-3,13
+46+,Female,Muscle Gain,Beginner,No Equipment,1-3,13
+46+,Male,Muscle Gain,Beginner,No Equipment,4-6,14
+46+,Female,Muscle Gain,Beginner,No Equipment,4-6,14
+46+,Male,Muscle Gain,Beginner,Gym,1-3,15
+46+,Female,Muscle Gain,Beginner,Gym,1-3,15
+46+,Male,Muscle Gain,Beginner,Gym,4-6,16
+46+,Female,Muscle Gain,Beginner,Gym,4-6,16
+46+,Male,Muscle Gain,Intermediate,No Equipment,1-3,17
+46+,Female,Muscle Gain,Intermediate,No Equipment,1-3,17
+46+,Male,Muscle Gain,Intermediate,No Equipment,4-6,18
+46+,Female,Muscle Gain,Intermediate,No Equipment,4-6,18
+46+,Male,Muscle Gain,Intermediate,Gym,1-3,19
+46+,Female,Muscle Gain,Intermediate,Gym,1-3,19
+46+,Male,Muscle Gain,Intermediate,Gym,4-6,20
+46+,Female,Muscle Gain,Intermediate,Gym,4-6,20
+46+,Male,Muscle Gain,Advanced,No Equipment,1-3,21
+46+,Female,Muscle Gain,Advanced,No Equipment,1-3,21
+46+,Male,Muscle Gain,Advanced,No Equipment,4-6,22
+46+,Female,Muscle Gain,Advanced,No Equipment,4-6,22
+46+,Male,Muscle Gain,Advanced,Gym,1-3,23
+46+,Female,Muscle Gain,Advanced,Gym,1-3,23
+46+,Male,Muscle Gain,Advanced,Gym,4-6,24
+46+,Female,Muscle Gain,Advanced,Gym,4-6,24
+46+,Male,General Fitness,Beginner,No Equipment,1-3,25
+46+,Female,General Fitness,Beginner,No Equipment,1-3,25
+46+,Male,General Fitness,Beginner,No Equipment,4-6,26
+46+,Female,General Fitness,Beginner,No Equipment,4-6,26
+46+,Male,General Fitness,Beginner,Gym,1-3,27
+46+,Female,General Fitness,Beginner,Gym,1-3,27
+46+,Male,General Fitness,Beginner,Gym,4-6,28
+46+,Female,General Fitness,Beginner,Gym,4-6,28
+46+,Male,General Fitness,Intermediate,No Equipment,1-3,29
+46+,Female,General Fitness,Intermediate,No Equipment,1-3,29
+46+,Male,General Fitness,Intermediate,No Equipment,4-6,30
+46+,Female,General Fitness,Intermediate,No Equipment,4-6,30
+46+,Male,General Fitness,Intermediate,Gym,1-3,31
+46+,Female,General Fitness,Intermediate,Gym,1-3,31
+46+,Male,General Fitness,Intermediate,Gym,4-6,32
+46+,Female,General Fitness,Intermediate,Gym,4-6,32
+46+,Male,General Fitness,Advanced,No Equipment,1-3,33
+46+,Female,General Fitness,Advanced,No Equipment,1-3,33
+46+,Male,General Fitness,Advanced,No Equipment,4-6,34
+46+,Female,General Fitness,Advanced,No Equipment,4-6,34
+46+,Male,General Fitness,Advanced,Gym,1-3,35
+46+,Female,General Fitness,Advanced,Gym,1-3,35
+46+,Male,General Fitness,Advanced,Gym,4-6,36
+46+,Female,General Fitness,Advanced,Gym,4-6,36

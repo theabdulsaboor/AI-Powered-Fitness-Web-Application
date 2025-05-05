@@ -1,0 +1,142 @@
+{% extends "base.html" %}
+
+{% block title %}SQL Console - AI Fitness{% endblock %}
+
+{% block extra_css %}
+<link href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/theme/monokai.min.css" rel="stylesheet">
+<style>
+    .CodeMirror {
+        height: 200px;
+        border: 1px solid var(--primary-color);
+        border-radius: 4px;
+    }
+    
+    .results-table {
+        max-height: 400px;
+        overflow-y: auto;
+    }
+    
+    .results-table table {
+        color: var(--text-color);
+    }
+    
+    .results-table th {
+        background-color: var(--darker-bg);
+        position: sticky;
+        top: 0;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col">
+        <h2 class="mb-4">SQL Console</h2>
+        
+        <div class="card mb-4">
+            <div class="card-body">
+                <h5 class="card-title mb-3">Enter SQL Query</h5>
+                <textarea id="sql-editor"></textarea>
+                <div class="d-grid gap-2 mt-3">
+                    <button class="btn btn-primary" onclick="executeQuery()">Execute Query</button>
+                    <button class="btn btn-outline-secondary" onclick="clearEditor()">Clear</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title mb-3">Query Results</h5>
+                <div id="results" class="results-table">
+                    <div class="alert alert-info">
+                        Enter a SQL query and click "Execute Query" to see results.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/sql/sql.min.js"></script>
+<script>
+let editor;
+
+document.addEventListener('DOMContentLoaded', function() {
+    editor = CodeMirror.fromTextArea(document.getElementById('sql-editor'), {
+        mode: 'text/x-sql',
+        theme: 'monokai',
+        lineNumbers: true,
+        indentWithTabs: true,
+        smartIndent: true,
+        lineWrapping: true,
+        matchBrackets: true,
+        autofocus: true
+    });
+});
+
+function executeQuery() {
+    const query = editor.getValue();
+    if (!query.trim()) {
+        alert('Please enter a SQL query');
+        return;
+    }
+    
+    fetch('{{ url_for("admin.sql_console") }}', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: `query=${encodeURIComponent(query)}`
+    })
+    .then(response => response.json())
+    .then(data => {
+        const resultsDiv = document.getElementById('results');
+        if (data.success) {
+            if (data.data) {
+                // Create table for results
+                let table = '<table class="table table-dark table-striped">';
+                
+                // Add header row
+                table += '<thead><tr>';
+                Object.keys(data.data[0]).forEach(key => {
+                    table += `<th>${key}</th>`;
+                });
+                table += '</tr></thead>';
+                
+                // Add data rows
+                table += '<tbody>';
+                data.data.forEach(row => {
+                    table += '<tr>';
+                    Object.values(row).forEach(value => {
+                        table += `<td>${value}</td>`;
+                    });
+                    table += '</tr>';
+                });
+                table += '</tbody></table>';
+                
+                resultsDiv.innerHTML = table;
+            } else {
+                resultsDiv.innerHTML = `<div class="alert alert-success">${data.message}</div>`;
+            }
+        } else {
+            resultsDiv.innerHTML = `<div class="alert alert-danger">${data.error}</div>`;
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        document.getElementById('results').innerHTML = 
+            '<div class="alert alert-danger">An error occurred while executing the query.</div>';
+    });
+}
+
+function clearEditor() {
+    editor.setValue('');
+    document.getElementById('results').innerHTML = 
+        '<div class="alert alert-info">Enter a SQL query and click "Execute Query" to see results.</div>';
+}
+</script>
+{% endblock %} 

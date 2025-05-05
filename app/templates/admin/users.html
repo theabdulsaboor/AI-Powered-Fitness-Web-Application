@@ -1,0 +1,114 @@
+{% extends "base.html" %}
+
+{% block title %}Users Management - AI Fitness{% endblock %}
+
+{% block content %}
+<div class="row mb-4">
+    <div class="col">
+        <h2>Users Management</h2>
+        <p class="text-muted">View and manage user accounts</p>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-dark table-striped">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Username</th>
+                        <th>Email</th>
+                        <th>Admin</th>
+                        <th>Created At</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for user in users %}
+                    <tr>
+                        <td>{{ user.id }}</td>
+                        <td>{{ user.username }}</td>
+                        <td>{{ user.email }}</td>
+                        <td>
+                            {% if user.is_admin %}
+                            <span class="badge bg-primary">Yes</span>
+                            {% else %}
+                            <span class="badge bg-secondary">No</span>
+                            {% endif %}
+                        </td>
+                        <td>{{ user.created_at.strftime('%Y-%m-%d %H:%M') }}</td>
+                        <td>
+                            <button class="btn btn-sm btn-primary" onclick="viewUser({{ user.id }})">View</button>
+                            <button class="btn btn-sm btn-danger" onclick="deleteUser({{ user.id }})">Delete</button>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!-- User Details Modal -->
+<div class="modal fade" id="viewUserModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content bg-dark">
+            <div class="modal-header">
+                <h5 class="modal-title">User Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div class="user-details">
+                    <p><strong>Username:</strong> <span id="viewUsername"></span></p>
+                    <p><strong>Email:</strong> <span id="viewEmail"></span></p>
+                    <p><strong>Age:</strong> <span id="viewAge"></span></p>
+                    <p><strong>Gender:</strong> <span id="viewGender"></span></p>
+                    <p><strong>Fitness Goal:</strong> <span id="viewFitnessGoal"></span></p>
+                    <p><strong>Fitness Level:</strong> <span id="viewFitnessLevel"></span></p>
+                    <p><strong>Equipment:</strong> <span id="viewEquipment"></span></p>
+                    <p><strong>Days per Week:</strong> <span id="viewDaysPerWeek"></span></p>
+                    <p><strong>Created At:</strong> <span id="viewCreatedAt"></span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+function viewUser(userId) {
+    // Fetch user data from server
+    fetch(`/admin/users/${userId}`)
+        .then(response => response.json())
+        .then(data => {
+            // Update modal content with real data
+            document.getElementById('viewUsername').textContent = data.username;
+            document.getElementById('viewEmail').textContent = data.email;
+            document.getElementById('viewAge').textContent = data.age || 'Not set';
+            document.getElementById('viewGender').textContent = data.gender || 'Not set';
+            document.getElementById('viewFitnessGoal').textContent = data.fitness_goal || 'Not set';
+            document.getElementById('viewFitnessLevel').textContent = data.fitness_level || 'Not set';
+            document.getElementById('viewEquipment').textContent = data.equipment || 'Not set';
+            document.getElementById('viewDaysPerWeek').textContent = data.days_per_week || 'Not set';
+            document.getElementById('viewCreatedAt').textContent = data.created_at;
+            
+            // Show the modal
+            const viewModal = new bootstrap.Modal(document.getElementById('viewUserModal'));
+            viewModal.show();
+        })
+        .catch(error => {
+            console.error('Error fetching user data:', error);
+            alert('Error fetching user data. Please try again.');
+        });
+}
+
+function deleteUser(userId) {
+    if (confirm('Are you sure you want to delete this user? This action cannot be undone.')) {
+        // In a real application, you would send a DELETE request to the server
+        console.log('Deleting user:', userId);
+    }
+}
+</script>
+{% endblock %} 

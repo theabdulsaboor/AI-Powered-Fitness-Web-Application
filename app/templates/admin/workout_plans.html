@@ -1,0 +1,141 @@
+{% extends "base.html" %}
+
+{% block title %}Workout Plans Management - AI Fitness{% endblock %}
+
+{% block content %}
+<div class="row mb-4">
+    <div class="col">
+        <h2>Workout Plans Management</h2>
+        <p class="text-muted">View and manage all workout plans</p>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-dark table-striped">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>User</th>
+                        <th>Workout Profile</th>
+                        <th>Created At</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for plan in plans %}
+                    <tr>
+                        <td>{{ plan.id }}</td>
+                        <td>{{ plan.user.username }}</td>
+                        <td>Profile #{{ plan.workout_profile }}</td>
+                        <td>{{ plan.created_at.strftime('%Y-%m-%d %H:%M') }}</td>
+                        <td>
+                            <button class="btn btn-sm btn-primary" onclick="viewPlan({{ plan.id }})">View</button>
+                            <button class="btn btn-sm btn-danger" onclick="deletePlan({{ plan.id }})">Delete</button>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!-- Workout Plan Details Modal -->
+<div class="modal fade" id="planModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content bg-dark">
+            <div class="modal-header">
+                <h5 class="modal-title">Workout Plan Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p><strong>User:</strong> <span id="viewUsername"></span></p>
+                        <p><strong>Workout Profile:</strong> <span id="viewProfile"></span></p>
+                        <p><strong>Created At:</strong> <span id="viewCreatedAt"></span></p>
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <h6>Workout Plan:</h6>
+                    <div id="workoutPlanDetails"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+function viewPlan(planId) {
+    // Fetch plan data from server
+    fetch(`/admin/workout-plans/${planId}`)
+        .then(response => response.json())
+        .then(data => {
+            // Update modal content with real data
+            document.getElementById('viewUsername').textContent = data.username;
+            document.getElementById('viewProfile').textContent = `Profile #${data.workout_profile}`;
+            document.getElementById('viewCreatedAt').textContent = data.created_at;
+            
+            // Get workout profile details
+            const profileNum = data.workout_profile;
+            const profiles = {{ WORKOUT_PROFILES|tojson }};
+            const planDetails = document.getElementById('workoutPlanDetails');
+            
+            if (profiles[profileNum]) {
+                let html = '';
+                profiles[profileNum].days.forEach(day => {
+                    html += `<h6 class="mt-3 mb-2 custom-day-heading">${day.day}</h6>`;
+                    if (day.exercises) {
+                        html += `<div class="table-responsive mb-2"><table class="table table-bordered custom-workout-table"><tbody>`;
+                        day.exercises.forEach(([exercise, detail]) => {
+                            html += `<tr><td>${exercise}</td><td><em>${detail}</em></td></tr>`;
+                        });
+                        html += `</tbody></table></div>`;
+                    }
+                });
+                planDetails.innerHTML = html;
+            } else {
+                planDetails.innerHTML = `<p>Workout Profile #${profileNum} not found.</p>`;
+            }
+            
+            // Show the modal
+            const modal = new bootstrap.Modal(document.getElementById('planModal'));
+            modal.show();
+        })
+        .catch(error => {
+            console.error('Error fetching plan data:', error);
+            alert('Error fetching plan data. Please try again.');
+        });
+}
+
+function deletePlan(planId) {
+    if (confirm('Are you sure you want to delete this workout plan? This action cannot be undone.')) {
+        fetch(`/admin/workout-plans/${planId}`, {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+        .then(response => {
+            if (response.ok) {
+                // Remove the row from the table
+                const row = document.querySelector(`tr[data-plan-id="${planId}"]`);
+                if (row) {
+                    row.remove();
+                }
+            } else {
+                alert('Error deleting workout plan. Please try again.');
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('Error deleting workout plan. Please try again.');
+        });
+    }
+}
+</script>
+{% endblock %} 

@@ -1,0 +1,134 @@
+{% extends "base.html" %}
+
+{% block title %}Generate Workout - AI Fitness{% endblock %}
+
+{% block extra_css %}
+<style>
+    .loading {
+        display: none;
+        text-align: center;
+        padding: 2rem;
+    }
+    
+    .loading-spinner {
+        width: 3rem;
+        height: 3rem;
+        border: 0.25rem solid var(--primary-color);
+        border-right-color: transparent;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+    }
+    
+    @keyframes spin {
+        to { transform: rotate(360deg); }
+    }
+    
+    .workout-result {
+        display: none;
+    }
+    
+    .generated-plan-title {
+        color: #ffffffb4;
+        text-align: center;
+        margin-bottom: 1.5rem;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-body">
+                <div class="alert alert-info">
+                    <p class="mb-0">Based on your profile information, we'll generate a personalized workout plan using our AI model.</p>
+                </div>
+                
+                <div class="loading">
+                    <div class="loading-spinner mb-3"></div>
+                    <p>Generating your personalized workout plan...</p>
+                </div>
+                
+                <div class="workout-result" style="display: none;">
+                    <h4 class="generated-plan-title">Your Personalized Workout Plan</h4>
+                    <div class="card mb-3">
+                        <div class="card-body generated-plan-body">
+                            <!-- The detailed plan will be injected here by JS -->
+                        </div>
+                    </div>
+                    <div class="d-grid">
+                        <a href="{{ url_for('main.dashboard') }}" class="btn btn-primary">View All Workouts</a>
+                    </div>
+                </div>
+                
+                <div class="d-grid generate-button">
+                    <button class="btn btn-primary" onclick="generateWorkout()">Generate Workout Plan</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+function generateWorkout() {
+    // Hide both sections initially
+    document.querySelector('.loading').style.display = 'none';
+    document.querySelector('.workout-result').style.display = 'none';
+    document.querySelector('.generate-button').style.display = 'none';
+    
+    // Show loading
+    document.querySelector('.loading').style.display = 'block';
+    
+    fetch('{{ url_for("main.generate_workout") }}', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+    .then(response => response.json())
+    .then(data => {
+        // Hide loading
+        document.querySelector('.loading').style.display = 'none';
+        
+        // Show result
+        document.querySelector('.workout-result').style.display = 'block';
+        
+        // Remove generate button completely
+        const generateButton = document.querySelector('.generate-button');
+        if (generateButton) {
+            generateButton.remove();
+        }
+        
+        // Render the detailed plan if available
+        const profileNum = data.workout_profile;
+        const profiles = {{ WORKOUT_PROFILES|tojson }};
+        const planBody = document.querySelector('.generated-plan-body');
+        if (profiles[profileNum]) {
+            let html = '';
+            profiles[profileNum].days.forEach(day => {
+                html += `<h6 class=\"mt-3 mb-2 custom-day-heading\">${day.day}</h6>`;
+                if (day.exercises) {
+                    html += `<div class=\"table-responsive mb-2\"><table class=\"table table-bordered custom-workout-table\"><tbody>`;
+                    day.exercises.forEach(([exercise, detail]) => {
+                        html += `<tr><td>${exercise}</td><td><em>${detail}</em></td></tr>`;
+                    });
+                    html += `</tbody></table></div>`;
+                }
+            });
+            planBody.innerHTML = html;
+        } else {
+            planBody.innerHTML = `<h5 class=\"card-title\">Workout Profile #${profileNum}</h5>`;
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('An error occurred while generating your workout plan. Please try again.');
+        document.querySelector('.loading').style.display = 'none';
+        document.querySelector('.workout-result').style.display = 'none';
+        document.querySelector('.generate-button').style.display = 'block';
+    });
+}
+</script>
+{% endblock %} 
